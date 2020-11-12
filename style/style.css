@@ -208,3 +208,31 @@ header{
      font-weight: 400;
      background-color: transparent;
     }
+#buttonContainer:hover{
+    border: 3px solid #1d8888;
+    background-color: transparent;
+}
+#buttonContainer:hover > a{
+    color: #1d8888;
+}
+/*+++++++++++++++++ Media Queries +++++++++++++++++*/
+@media (max-width:1210px){
+    #descriptionText{
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+        width: 100%;
+        margin:0;
+        margin-top: 100px;
+    }
+    #descriptionText h1{
+        width: 90%;
+        text-align: center;
+        font-size: 35px;
+    }
+}
+@media (max-width:766px){
+    #listAndButton{
+        display: none;
+    }
+}
