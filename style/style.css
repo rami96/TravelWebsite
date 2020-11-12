@@ -13,9 +13,12 @@ header{
     height: 100vh;
     width: 100vw;
 }
+
+/*--------------      Navbar      ------------------*/
+
 #navbar{
     width: 100%;
-    height: 70px;
+    height: 90px;
 }
 #insideNav{
     width: 92%;
@@ -28,17 +31,39 @@ header{
 }
 
 #logo{
-    width: 70px;
-    height: 50%;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
     background-color: teal;
+    margin-bottom: 21px;
 }
 #navElements{
+    height: 100%;
     display: flex;
     float: right;
+    align-items: flex-end;
+}
+#listAndButton{
+    display: flex;
+    align-items: center;
 }
 
 #insideNav ul{
     list-style: none;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#insideNav ul li{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    height: 100%;
 }
 
 #navElements a{
@@ -47,11 +72,78 @@ header{
     margin-right: 65px;
     font-size: 16px;
     font-weight: 400;
+    /*margin-bottom: 13px;*/
 }
-#hoverLink{
-    margin-top: 10px;
+#buttonlist a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #1d8888;
+    position: absolute;
+}
+#buttonlist {
+    cursor: pointer;
+    text-decoration: none;
+    height: 50px;
+    margin-bottom: 7px;
+    width: 120px;
+    height: 55px;
+    background: transparent;
+    border: 3px solid #1d8888;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+#circle1{
+    position: relative;
+    bottom: 20px;
+    right:30px;
+    background-color: #1d8888;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    transition: .3s ease-in-out;
+}
+#buttonlist:hover > #circle1{
+    color: white;
+    font-weight: 500;
+    border: 0px;
+    width: 500px;
+    height: 200px;
+}
+#buttonlist:hover > a{
+    color: white;
+}
+#buttonlist:hover{
+    background: #1d8888;
+    font-weight: 500;
+}
+
+#hoverLink1, #hoverLink2, #hoverLink3{
     height: 3px;
-    width: 60%;
-    left: 20px;
+    width: 50px;
+    position: absolute;
+    left: -50px;
     background: #6b6b6b;
+    transition: .3s ease-in-out;
+    top: 25px
 }
+
+#lnk1:hover ~ #hoverLink1{
+    background-color: rgb(146, 146, 146);
+    left: 0px;
+}
+#lnk2:hover ~ #hoverLink2{
+    background-color: rgb(146, 146, 146);
+    left: 0px;
+}
+#lnk3:hover ~ #hoverLink3{
+    background-color: rgb(146, 146, 146);
+    left: 0px;
+}
+
+/*--------------      Main Text      ------------------*/
+ #descriptionText
