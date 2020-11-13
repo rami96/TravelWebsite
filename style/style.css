@@ -31,6 +31,15 @@ header{
     justify-content: space-between;
 }
 
+#logoImg{
+    width: 25%;
+    margin-bottom: 21px;
+    transition: .3s ease-in-out;
+}
+
+#logoImg:active{
+    transform: scale(1.1);
+}
 #logo{
     width: 80px;
     height: 40px;
@@ -191,12 +200,14 @@ header{
     justify-content: center;
     margin-top: 40px;
 }
-
 #buttonContainer{
     cursor: pointer;
     border-radius: 17px;
     background-color: #1d8888;
     padding: 18px 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
  #letsMeet{
@@ -215,8 +226,146 @@ header{
 #buttonContainer:hover > a{
     color: #1d8888;
 }
+#buttonContainer:active{
+    transform: scale(1.1);
+}
+#burger{
+    width: 35px;
+    height: 42px;
+    display: 0;
+    margin-bottom: 5px;
+}
+
+/*#burger:hover > div{
+    background-color: #adc7d4;
+}*/
+.burger1,.burger2,.burger3{
+    height: 6px;
+    width: 35px;
+    background-color: #1d8888;
+    margin-top: 5px;
+    transform: rotateY(0);
+}
+.burger1,.burger3{
+    transition: .3s ease-in-out;
+}
+.burger1click{
+    transform: rotate(135deg);
+    background-color: white;
+    margin-top: 20px;
+}
+.burger2click{
+    display: none;
+}
+.burger3click{
+    background-color: white;
+    transform: rotate(-135deg);
+    margin-top: -5px;
+}
+#listAndButton2{
+    width: 100%;
+    height: 100%;
+    background: #1d8888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: space-around;*/
+    
+}
+.hiddenMenu{
+    height: 100vh;
+    transition: .5s ease-in-out;
+}
+.listAndButton2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d8888;
+    height: 100%;
+    transition: .8s ease-in-out;
+}
+
+#navElements2{
+    margin-top: 80px;
+    padding: 0;  
+    
+}
+#navElements2 li{
+    margin-bottom: 80px;
+    text-align: center;
+    list-style: none;
+}
+#burgerContainer{
+    display: none;
+}
+.hidden2{display: none;}
+
+#navElements2 li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#buttonlist2{
+    height: 60px;
+    width: 150px;
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#buttonlist2 a{
+    text-decoration: none;
+    color: #1d8888;
+    font-size: 20px;
+    font-weight: 500;
+}
+.hidden{
+    height: 0px;
+   /* height: 0px;*/
+}
+
 /*+++++++++++++++++ Media Queries +++++++++++++++++*/
 @media (max-width:1210px){
+    #descriptionText{
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+        width: 90%;
+        margin:0;
+        margin-top: 160px;
+    }
+    #descriptionText h1{
+        width: 90%;
+        text-align: center;
+        font-size: 35px;
+    }
+    
+}
+@media (max-width:766px){
+
+    #burgerContainer{
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    #navbar {
+        display: none;
+    }
+    
+    #burger{
+        display: 1;
+    }
+    /*#burger:active{
+        margin-bottom: 0;
+    }*/
+    
     #descriptionText{
         display: flex;
         align-items: center;
@@ -225,14 +374,5 @@ header{
         margin:0;
         margin-top: 100px;
     }
-    #descriptionText h1{
-        width: 90%;
-        text-align: center;
-        font-size: 35px;
-    }
-}
-@media (max-width:766px){
-    #listAndButton{
-        display: none;
-    }
+    
 }
